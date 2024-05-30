@@ -116,7 +116,7 @@ async function main()
     passport.use( new GoogleStrategy({     // step 2) client id clientSecret and callbackURL is send with the authencation request with scopes
         clientID: process.env.CLIENT_ID,                                  
         clientSecret: process.env.CLIENT_SECRET,
-        callbackURL: "/auth/google/callback"    
+        callbackURL: "https://easyway-backend-pruu.onrender.com/auth/google/callback"    
       },
       function(accessToken, refreshToken, profile, cb) {  // is triggered after authentication is done from the google and renponse is send to  "/auth/google/callback" by google
         
