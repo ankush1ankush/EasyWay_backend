@@ -129,7 +129,12 @@ async function main()
       
 
 
-    
+    app.get("/",(req,res)=>{
+
+          res.status(200).json({
+                message:"hello server is up"
+            })
+    })
     app.get("/auth/login/success", async (req, res) => {
        
          
