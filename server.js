@@ -240,7 +240,7 @@ async function main()
            }
            )
            const client=await User.find({_id:client_id});
-           res.json({documents:client[0]?.Document});
+           res.json({client:client[0]});
      }
      else{
          res.json({client:"not found"});
