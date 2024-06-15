@@ -240,7 +240,7 @@ async function main()
            }
            )
            const client=await User.find({_id:client_id});
-           res.json({Document:client[0]?.Document});
+           res.json({Documents:client[0]?.Document});
      }
      else{
          res.json({client:"not found"});
@@ -257,8 +257,7 @@ async function main()
             }
         )
         const client=await User.find({_id:client_id});
-        res.json({client:client[0]});
-
+        res.json({Documents:client[0]?.Document});
     }
      else{
          res.json({client:"not found"});
@@ -277,7 +276,7 @@ async function main()
     if(req.isAuthenticated())
     {
         const client=await User.find({_id:client_id});
-        res.json({documents:client[0]?.Document});
+        res.json({Documents:client[0]?.Document});
      }
      else{
          res.json({client:"not found"});
