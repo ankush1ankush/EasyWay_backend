@@ -32,7 +32,7 @@ app.use(session({
 
   app.use(
 	cors({
-		origin: `8`,
+		origin: `*`,
 		methods: "GET,POST,PUT,DELETE",
 		credentials: true,
 	})
